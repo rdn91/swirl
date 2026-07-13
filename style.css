@@ -3,6 +3,7 @@
     --text-main: #e0e0e0;
     --accent-glow: #00ffcc;
     --accent-dark: #45a29e;
+    --dark-grey: #1f2833;
 }
 * {
     margin: 0;
@@ -121,4 +122,57 @@ nav {
     color: beige ;
     border-color: beige;
 }
-
+.project-card {
+    background-color: var(--dark-grey) ;
+    border: 1px solid #201f33;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease ;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 5px;
+}
+.project-card:hover {
+    border-color: var(--accent-glow);
+}
+.project-image {
+    width: 300px ;
+    height: 200pxpx;
+    object-fit: contain;
+    border-bottom: 1px solid #201f33;
+}
+.project-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.project-title {
+    font-size: large;
+    color: beige;
+    margin-bottom: 15px;
+}
+.project-desc {
+    font-size: medium;
+    margin-bottom: 25px;
+    color: var(--text-main);
+}
+.project-tech {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.project-tech-stack-img {
+    color: var(--accent-glow);
+    border-radius: 4px;
+    border: 1px solid var(--accent-dark);
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    object-fit: contain;
+}
+.github-icon {
+    width: 64px;
+    height: 64px;
+}
