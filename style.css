@@ -288,6 +288,10 @@ nav {
     flex-direction: column;
     overflow-y:auto ;
 }
+.box p:not(:last-child) {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+}
 .box:hover {
     border-color: var(--accent-glow);
 }
@@ -353,16 +357,6 @@ nav {
     color: var(--text-main);
     line-height: 1.8;
 }
-#minecraft-img {
-    height: 300px;
-    width: 600px;
-    padding: 10px 5px;
-}
-#trekmarlin {
-    height: 300px;
-    width: 600px;
-    padding: 10px 5px;
-}
 .error-terminal {
     display: flex;
     justify-content: center;
@@ -379,6 +373,10 @@ nav {
     align-items: center;
     border-bottom: 1px solid #333;
     color: #888;
+    margin-left: auto;
+    margin: auto;
+    margin-top: 100px;
+    width: 50%;
 }
 .error-terminal-header {
     background-color: #1a1a1a;
@@ -395,6 +393,28 @@ nav {
     background-color: #0c0c0c;
     flex-direction: column;
 }
-@media (width=768px) {
-    
+@media (max-width: 768px) {
+    .project-card {
+        width: 90%;
+        flex-direction: column;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+    }
+    .box-bottom-left,
+    .box-bottom-right,
+    .box-middle-right,
+    .box-middle-tall,
+    .box-top-left,
+    .box-top-right {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+    .error-terminal {
+        width: 90%;
+        height: 100vh;
+        margin-top: 30px;
+    }
 }
